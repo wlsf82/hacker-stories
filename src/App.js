@@ -1,7 +1,7 @@
 import React from 'react';
 
-import {List} from './components/List';
-import {Search} from './components/Search';
+import { List } from './components/List';
+import { Search } from './components/Search';
 
 const App = () => {
   const stories = [
