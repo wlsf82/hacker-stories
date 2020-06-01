@@ -1,15 +1,12 @@
 import React from 'react';
 
-export const Search = props => {
-  return (
-    <>
-      <label htmlFor="search">Search: </label>
-      <input
-        id="search"
-        type="text"
-        value={props.search}
-        onChange={props.onSearch}
-      />
-    </>
-  )
-}
+export const Search = ({ search, onSearch }) =>
+  <div>
+    <label htmlFor="search">Search: </label>
+    <input
+      id="search"
+      type="text"
+      value={search}
+      onChange={onSearch}
+    />
+  </div>
