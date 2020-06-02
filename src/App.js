@@ -39,10 +39,11 @@ const App = () => {
       <h1>My Hacker Stories</h1>
       <InputWithLabel
         id="search"
-        label="Search: "
         value={searchTerm}
         onInputChange={handleSearch}
-      />
+      >
+        <strong>Search: </strong>
+      </InputWithLabel>
       <hr />
       <List list={searchedStories}/>
     </div>
