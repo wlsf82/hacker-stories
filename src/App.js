@@ -2,18 +2,7 @@ import React from 'react';
 
 import { List } from './components/List';
 import { Search } from './components/Search';
-
-const useSemiPersistentState = (key, initialState) => {
-  const [value, setValue] = React.useState(
-    localStorage.getItem(key) || initialState
-  );
-
-  React.useEffect(() => {
-    localStorage.setItem(key, value);
-  }, [value, key]);
-
-  return [value, setValue];
-};
+import { useSemiPersistentState } from './lib/useSemiPersistentState'
 
 const App = () => {
   const stories = [
