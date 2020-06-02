@@ -1,8 +1,7 @@
 import React from 'react';
 
 import { List } from './components/List';
-import { Search } from './components/Search';
-import { useSemiPersistentState } from './lib/useSemiPersistentState'
+import { useSemiPersistentState } from './lib/useSemiPersistentState';
 
 const App = () => {
   const stories = [
