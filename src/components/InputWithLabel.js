@@ -19,6 +19,7 @@ export const InputWithLabel = ({
   return (
     <>
       <label htmlFor={id}>{children}</label>
+      &nbsp;
       <input
         ref={inputRef}
         id={id}
