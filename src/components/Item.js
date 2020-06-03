@@ -3,7 +3,13 @@ import React from 'react';
 export const Item = ({ item, onRemoveItem }) => (
   <div>
     <span>
-      <a href={item.url}>{item.title}</a>
+      <a
+        href={item.url}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {item.title}
+      </a>
     </span>
     <span>{item.author}</span>
     <span>{item.num_comments}</span>
