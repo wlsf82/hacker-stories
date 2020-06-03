@@ -2,7 +2,9 @@ import React from 'react';
 
 import { InputWithLabel } from './components/InputWithLabel'
 import { List } from './components/List';
-import { useSemiPersistentState } from './lib/useSemiPersistentState';
+import { ParagraphWithEllipsis } from './components/ParagraphWithEllipsis';
+
+import { useSemiPersistentState } from './lib/useSemiPersistentState'
 
 const initialStories = [
   {
@@ -82,11 +84,13 @@ const App = () => {
 
       <hr />
 
-      {isError && <p>Something went wrong ...</p>}
+      {isError &&
+        <ParagraphWithEllipsis>Something went wrong</ParagraphWithEllipsis>
+      }
 
       {
         isLoading ? (
-          <p>Loading ...</p>
+          <ParagraphWithEllipsis>Loading</ParagraphWithEllipsis>
         ) : (
           <List
             list={searchedStories}
