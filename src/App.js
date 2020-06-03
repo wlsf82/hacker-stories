@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { InputWithLabel } from './components/InputWithLabel'
+import { InputWithLabel } from './components/InputWithLabel';
 import { List } from './components/List';
 import { ParagraphWithEllipsis } from './components/ParagraphWithEllipsis';
 
@@ -65,7 +65,7 @@ const App = () => {
       type: 'REMOVE_STORY',
       payload: item,
     });
-  }
+  };
 
   const handleSearch = event => {
     setSearchTerm(event.target.value)
@@ -105,7 +105,7 @@ const App = () => {
         )
       }
     </div>
-  )
-}
+  );
+};
 
 export default App;

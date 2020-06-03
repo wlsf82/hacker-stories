@@ -14,7 +14,7 @@ export const InputWithLabel = ({
     if (isFocused && inputRef.current) {
       inputRef.current.focus();
     }
-  }, [isFocused])
+  }, [isFocused]);
 
   return (
     <>
@@ -28,5 +28,5 @@ export const InputWithLabel = ({
         onChange={onInputChange}
       />
     </>
-  )
-}
+  );
+};
