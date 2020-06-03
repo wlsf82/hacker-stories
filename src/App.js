@@ -43,22 +43,22 @@ const App = () => {
 
   const [stories, dispatchStories] = React.useReducer(
     storiesReducer,
-    []
+    { data: [], isLoading: false, isError: false }
   );
-  const [isLoading, setIsLoading] = React.useState(false);
-  const [isError, setIsError] = React.useState(false);
 
   React.useEffect(() => {
-    setIsLoading(true);
+    dispatchStories({ type: 'STORIES_FETCH_INIT' });
 
-    getAsyncStories().then(result => {
-      dispatchStories({
-        type: 'SET_STORIES',
-        payload: result.data.stories,
-      });
-      setIsLoading(false);
-    })
-    .catch(() => setIsError(true));
+    getAsyncStories()
+      .then(result => {
+        dispatchStories({
+          type: 'STORIES_FETCH_SUCCESS',
+          payload: result.data.stories,
+        });
+      })
+      .catch(() =>
+        dispatchStories({ type: 'STORIES_FETCH_FAILURE'})
+      );
   }, []);
 
   const handleRemoveStories = item => {
@@ -72,7 +72,7 @@ const App = () => {
     setSearchTerm(event.target.value)
   };
 
-  const searchedStories = stories.filter(story =>
+  const searchedStories = stories.data.filter(story =>
     story.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
@@ -91,12 +91,12 @@ const App = () => {
 
       <hr />
 
-      {isError &&
+      {stories.isError &&
         <ParagraphWithEllipsis>Something went wrong</ParagraphWithEllipsis>
       }
 
       {
-        isLoading ? (
+        stories.isLoading ? (
           <ParagraphWithEllipsis>Loading</ParagraphWithEllipsis>
         ) : (
           <List
