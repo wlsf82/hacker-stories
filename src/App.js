@@ -24,14 +24,6 @@ const App = () => {
     { data: [], isLoading: false, isError: false }
   );
 
-  const handleSearchInput = event => {
-    setSearchTerm(event.target.value);
-  };
-
-  const handleSearchSubmit = () => {
-    setUrl(`${API_ENDPOINT}${searchTerm}`);
-  };
-
   const handleFetchStories = React.useCallback(() => {
     dispatchStories({ type: 'STORIES_FETCH_INIT' });
 
@@ -57,6 +49,14 @@ const App = () => {
       type: 'REMOVE_STORY',
       payload: item,
     });
+  };
+
+  const handleSearchInput = event => {
+    setSearchTerm(event.target.value);
+  };
+
+  const handleSearchSubmit = () => {
+    setUrl(`${API_ENDPOINT}${searchTerm}`);
   };
 
   return (
