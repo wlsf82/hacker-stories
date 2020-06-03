@@ -27,12 +27,11 @@ const initialStories = [
 ];
 
 const getAsyncStories = () =>
-  // new Promise(resolve =>
-  //   setTimeout(
-  //     () => resolve({ data: { stories: initialStories } }),
-  //     2000
-  //   )
-    new Promise((resolve, reject) =>setTimeout(reject, 2000)
+  new Promise(resolve =>
+    setTimeout(
+      () => resolve({ data: { stories: initialStories } }),
+      2000
+    )
   );
 
 const App = () => {
