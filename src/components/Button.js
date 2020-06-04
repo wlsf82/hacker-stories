@@ -4,9 +4,15 @@ export const Button = ({
   type = 'button',
   isDisabled = false,
   onClick,
+  className,
   children
 }) => (
-  <button type={type} disabled={isDisabled} onClick={onClick}>
+  <button
+    className={className}
+    type={type}
+    disabled={isDisabled}
+    onClick={onClick}
+  >
     {children}
   </button>
 );
