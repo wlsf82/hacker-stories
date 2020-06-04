@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
+import { Button } from './components/Button';
 import { InputWithLabel } from './components/InputWithLabel';
 import { List } from './components/List';
 import { ParagraphWithEllipsis } from './components/ParagraphWithEllipsis';
@@ -73,13 +74,12 @@ const App = () => {
         <strong>Search:</strong>
       </InputWithLabel>
 
-      <button
-        type="button"
-        disabled={!searchTerm}
+      <Button
+        isDisabled={!searchTerm}
         onClick={handleSearchSubmit}
       >
         Submit
-      </button>
+      </Button>
 
       <hr />
 

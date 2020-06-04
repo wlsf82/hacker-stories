@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Button } from './Button';
+
 export const Item = ({ item, onRemoveItem }) => (
   <div>
     <span>
@@ -15,9 +17,9 @@ export const Item = ({ item, onRemoveItem }) => (
     <span>{item.num_comments}</span>
     <span>{item.points}</span>
     <span>
-      <button type="button" onClick={() => onRemoveItem(item)}>
+      <Button onClick={() => onRemoveItem(item)}>
         Dismiss
-      </button>
+      </Button>
     </span>
   </div>
 );
