@@ -56,29 +56,33 @@ const App = () => {
     setSearchTerm(event.target.value);
   };
 
-  const handleSearchSubmit = () => {
+  const handleSearchSubmit = event => {
     setUrl(`${API_ENDPOINT}${searchTerm}`);
+
+    event.preventDefault();
   };
 
   return (
     <div>
       <h1>My Hacker Stories</h1>
 
-      <InputWithLabel
-        id="search"
-        value={searchTerm}
-        isFocused
-        onInputChange={handleSearchInput}
-      >
-        <strong>Search:</strong>
-      </InputWithLabel>
+      <form onSubmit={handleSearchSubmit}>
+        <InputWithLabel
+          id="search"
+          value={searchTerm}
+          isFocused
+          onInputChange={handleSearchInput}
+        >
+          <strong>Search:</strong>
+        </InputWithLabel>
 
-      <Button
-        isDisabled={!searchTerm}
-        onClick={handleSearchSubmit}
-      >
-        Submit
-      </Button>
+        <Button
+          type="submit"
+          isDisabled={!searchTerm}
+        >
+          Submit
+        </Button>
+      </form>
 
       <hr />
 
