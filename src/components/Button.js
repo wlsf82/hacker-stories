@@ -5,7 +5,8 @@ export const Button = ({
   isDisabled = false,
   onClick,
   children
-}) =>
+}) => (
   <button type={type} disabled={isDisabled} onClick={onClick}>
     {children}
-  </button>;
+  </button>
+);
