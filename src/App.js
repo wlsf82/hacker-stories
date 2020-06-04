@@ -1,10 +1,9 @@
 import React from 'react';
 import axios from 'axios';
 
-import { Button } from './components/Button';
-import { InputWithLabel } from './components/InputWithLabel';
 import { List } from './components/List';
 import { ParagraphWithEllipsis } from './components/ParagraphWithEllipsis';
+import { SearchForm } from './components/SearchForm';
 
 import { storiesReducer } from './lib/storiesReducer';
 import { useSemiPersistentState } from './lib/useSemiPersistentState';
@@ -66,23 +65,11 @@ const App = () => {
     <div>
       <h1>My Hacker Stories</h1>
 
-      <form onSubmit={handleSearchSubmit}>
-        <InputWithLabel
-          id="search"
-          value={searchTerm}
-          isFocused
-          onInputChange={handleSearchInput}
-        >
-          <strong>Search:</strong>
-        </InputWithLabel>
-
-        <Button
-          type="submit"
-          isDisabled={!searchTerm}
-        >
-          Submit
-        </Button>
-      </form>
+      <SearchForm
+        searchTerm={searchTerm}
+        onSearchInput={handleSearchInput}
+        onSearchSubmit={handleSearchSubmit}
+      />
 
       <hr />
 
