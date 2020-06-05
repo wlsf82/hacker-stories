@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import { Item } from './components/Item/Item';
+import { Item } from './components/Item';
 
 describe('Item', () => {
   const item = {

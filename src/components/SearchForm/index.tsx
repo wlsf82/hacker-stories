@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Button } from '../Button/Button';
-import { InputWithLabel } from '../InputWithLabel/InputWithLabel';
+import { Button } from '../Button';
+import { InputWithLabel } from '../InputWithLabel';
 
 import { SearchFormProps } from '../../types';
 
