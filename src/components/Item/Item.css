@@ -1,0 +1,16 @@
+.item {
+  display: flex;
+  align-items: center;
+  padding-bottom: 5px;
+}
+
+.item > span {
+  padding: 0 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.item > span > a {
+  color: inherit;
+}

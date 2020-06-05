@@ -3,9 +3,9 @@ import axios from 'axios';
 
 import './App.css';
 
-import { List } from './components/List';
-import { ParagraphWithEllipsis } from './components/ParagraphWithEllipsis';
-import { SearchForm } from './components/SearchForm';
+import { List } from './components/List/List'
+import { ParagraphWithEllipsis } from './components/ParagraphWithEllipsis/ParagraphWithEllipsis';
+import { SearchForm } from './components/SearchForm/SearchForm';
 
 import { storiesReducer } from './lib/storiesReducer';
 import { useSemiPersistentState } from './lib/useSemiPersistentState';

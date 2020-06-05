@@ -1,6 +1,8 @@
 import React from 'react';
 
-import { Button } from './Button';
+import './Item.css';
+
+import { Button } from '../Button/Button';
 
 export const Item = ({ item, onRemoveItem }) => (
   <div className="item">

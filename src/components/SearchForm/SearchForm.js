@@ -1,7 +1,9 @@
 import React from 'react';
 
-import { Button } from './Button';
-import { InputWithLabel } from './InputWithLabel';
+import './SearchForm.css';
+
+import { Button } from '../Button/Button';
+import { InputWithLabel } from '../InputWithLabel/InputWithLabel';
 
 export const SearchForm = ({
   searchTerm,

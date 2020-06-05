@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './Button.css';
+
 export const Button = ({
   type = 'button',
   isDisabled = false,

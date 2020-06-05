@@ -1,0 +1,21 @@
+.button {
+  background: transparent;
+  border: 1px solid #171272;
+  padding: 5px;
+  cursor: pointer;
+
+  transition: all 0.1s ease-in;
+}
+
+.button:hover {
+  background: #171272;
+  color: #ffffff;
+}
+
+.button-small {
+  padding: 5px;
+}
+
+.button-large {
+  padding: 10px;
+}
