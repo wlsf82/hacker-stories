@@ -19,3 +19,8 @@
 .button-large {
   padding: 10px;
 }
+
+.button:hover > svg > g {
+  fill: #ffffff;
+  stroke: #ffffff;
+}

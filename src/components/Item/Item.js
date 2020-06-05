@@ -1,6 +1,7 @@
 import React from 'react';
 
 import './Item.css';
+import { ReactComponent as Check } from '../../check.svg'
 
 import { Button } from '../Button/Button';
 
@@ -23,7 +24,7 @@ export const Item = ({ item, onRemoveItem }) => (
         onClick={() => onRemoveItem(item)}
         className="button button-small"
       >
-        Dismiss
+        <Check height="18px" width="18px" />
       </Button>
     </span>
   </div>
