@@ -1,15 +1,17 @@
 import React from 'react';
 
-import './SearchForm.css';
-
 import { Button } from '../Button/Button';
 import { InputWithLabel } from '../InputWithLabel/InputWithLabel';
+
+import { SearchFormProps } from '../../types';
+
+import './SearchForm.css';
 
 export const SearchForm = ({
   searchTerm,
   onSearchInput,
   onSearchSubmit,
-}) => (
+}: SearchFormProps) => (
   <form onSubmit={onSearchSubmit} className="search-form">
     <InputWithLabel
       id="search"

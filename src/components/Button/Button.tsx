@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { ButtonProps } from '../../types';
+
 import './Button.css';
 
 export const Button = ({
@@ -8,7 +10,7 @@ export const Button = ({
   onClick,
   className,
   children
-}) => (
+}: ButtonProps) => (
   <button
     className={className}
     type={type}

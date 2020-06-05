@@ -1,4 +1,9 @@
-export const storiesReducer = (state, action) => {
+import { StoriesState, StoriesAction } from '../types';
+
+export const storiesReducer = (
+  state: StoriesState,
+  action: StoriesAction
+) => {
   switch (action.type) {
     case 'STORIES_FETCH_INIT':
       return {

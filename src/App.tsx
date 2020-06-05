@@ -10,6 +10,8 @@ import { SearchForm } from './components/SearchForm/SearchForm';
 import { storiesReducer } from './lib/storiesReducer';
 import { useSemiPersistentState } from './lib/useSemiPersistentState';
 
+import { Story } from './types';
+
 const API_ENDPOINT = 'https://hn.algolia.com/api/v1/search?query=';
 
 const App = () => {
@@ -46,18 +48,22 @@ const App = () => {
     handleFetchStories();
   }, [handleFetchStories]);
 
-  const handleRemoveStories = item => {
+  const handleRemoveStory = (item: Story) => {
     dispatchStories({
       type: 'REMOVE_STORY',
       payload: item,
     });
   };
 
-  const handleSearchInput = event => {
+  const handleSearchInput = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
     setSearchTerm(event.target.value);
   };
 
-  const handleSearchSubmit = event => {
+  const handleSearchSubmit = (
+    event: React.FormEvent<HTMLFormElement>
+  ) => {
     setUrl(`${API_ENDPOINT}${searchTerm}`);
 
     event.preventDefault();
@@ -83,7 +89,7 @@ const App = () => {
         ) : (
           <List
             list={stories.data}
-            onRemoveItem={handleRemoveStories}
+            onRemoveItem={handleRemoveStory}
           />
         )
       }

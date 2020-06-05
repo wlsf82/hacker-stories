@@ -1,11 +1,14 @@
 import React from 'react';
 
-import './Item.css';
-import { ReactComponent as Check } from '../../check.svg'
-
 import { Button } from '../Button/Button';
 
-export const Item = ({ item, onRemoveItem }) => (
+import { ReactComponent as Check } from '../../check.svg';
+
+import { ItemProps } from '../../types';
+
+import './Item.css';
+
+export const Item = ({ item, onRemoveItem } : ItemProps) => (
   <div className="item">
     <span style={{ width: '40%' }}>
       <a
