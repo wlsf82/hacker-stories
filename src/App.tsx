@@ -1,8 +1,6 @@
 import React from 'react';
 import axios from 'axios';
 
-import './App.css';
-
 import { List } from './components/List'
 import { ParagraphWithEllipsis } from './components/ParagraphWithEllipsis';
 import { SearchForm } from './components/SearchForm';
@@ -11,6 +9,8 @@ import { storiesReducer } from './lib/storiesReducer';
 import { useSemiPersistentState } from './lib/useSemiPersistentState';
 
 import { Story } from './types';
+
+import './App.css';
 
 const API_ENDPOINT = 'https://hn.algolia.com/api/v1/search?query=';
 
