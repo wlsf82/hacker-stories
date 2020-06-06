@@ -79,3 +79,16 @@ export type StoriesAction =
   | StoriesFetchSuccessAction
   | StoriesFetchFailureAction
   | StoriesRemoveAction;
+
+export enum SORTS_ENUM {
+  NONE = 'NONE',
+  TITLE = 'TITLE',
+  AUTHOR = 'AUTHOR',
+  COMMENT = 'COMMENT',
+  POINT = 'POINT',
+};
+
+export type Sorting = {
+  sortKey: SORTS_ENUM;
+  isReverse: boolean;
+};

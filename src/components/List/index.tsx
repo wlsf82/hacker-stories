@@ -4,17 +4,9 @@ import { sortBy } from 'lodash';
 import Button from '../Button';
 import Item from '../Item';
 
-import { ListProps, Story, Stories } from '../../types';
+import { ListProps, Story, Stories, SORTS_ENUM, Sorting } from '../../types';
 
 import './List.css';
-
-enum SORTS_ENUM {
-  NONE = 'NONE',
-  TITLE = 'TITLE',
-  AUTHOR = 'AUTHOR',
-  COMMENT = 'COMMENT',
-  POINT = 'POINT',
-}
 
 const SORTS = {
   NONE: (list: Stories) => list,
@@ -25,14 +17,22 @@ const SORTS = {
 };
 
 const List = ({ list, onRemoveItem }: ListProps) => {
-  const [sort, setSort] = React.useState<SORTS_ENUM>(SORTS_ENUM.NONE);
+  const [sort, setSort] = React.useState<Sorting>({
+    sortKey: SORTS_ENUM.NONE,
+    isReverse: false,
+  });
 
   const handleSort = (sortKey: SORTS_ENUM) => {
-    setSort(sortKey);
+    const isReverse = sort.sortKey === sortKey && !sort.isReverse;
+
+    setSort({ sortKey, isReverse });
   };
 
-  const sortFunction = SORTS[sort];
-  const sortedList = sortFunction(list);
+  const sortFunction = SORTS[sort.sortKey];
+
+  const sortedList = sort.isReverse
+    ? sortFunction(list).reverse()
+    : sortFunction(list);
 
   return (
     <div>
