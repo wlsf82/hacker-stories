@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Button } from '../Button';
+import Button from '../Button';
 
 import { ReactComponent as Check } from '../../check.svg';
 
@@ -8,7 +8,7 @@ import { ItemProps } from '../../types';
 
 import './Item.css';
 
-export const Item = ({ item, onRemoveItem } : ItemProps) => (
+const Item = ({ item, onRemoveItem } : ItemProps) => (
   <div className="item">
     <span style={{ width: '40%' }}>
       <a
@@ -32,3 +32,5 @@ export const Item = ({ item, onRemoveItem } : ItemProps) => (
     </span>
   </div>
 );
+
+export default Item;

@@ -1,8 +1,8 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import { Item } from '../components/Item';
-import { List } from '../components/List';
+import Item from '../components/Item';
+import List from '../components/List';
 
 describe('List', () => {
   const list = [

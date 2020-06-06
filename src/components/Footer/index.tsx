@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Footer = () => (
+const Footer = () => (
   <footer>
     Icons made by <a
       href="https://www.flaticon.com/authors/freepik"
@@ -19,3 +19,5 @@ export const Footer = () => (
     </a>
   </footer>
 )
+
+export default Footer;

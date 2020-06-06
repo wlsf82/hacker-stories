@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Item } from '../Item';
+import Item from '../Item';
 
 import { ListProps } from '../../types';
 
-export const List = ({ list, onRemoveItem }: ListProps) => (
+const List = ({ list, onRemoveItem }: ListProps) => (
   <>
     {list.map(item => (
       <Item
@@ -15,3 +15,5 @@ export const List = ({ list, onRemoveItem }: ListProps) => (
     ))}
   </>
 );
+
+export default List;

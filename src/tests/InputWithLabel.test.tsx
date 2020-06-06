@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import { InputWithLabel } from '../components/InputWithLabel';
+import InputWithLabel from '../components/InputWithLabel';
 
 describe('InputWithLabel', () => {
   it('renders snapshot', () => {

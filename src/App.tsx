@@ -1,10 +1,10 @@
 import React from 'react';
 import axios from 'axios';
 
-import { List } from './components/List'
-import { ParagraphWithEllipsis } from './components/ParagraphWithEllipsis';
-import { SearchForm } from './components/SearchForm';
-import { Footer } from './components/Footer';
+import List from './components/List'
+import ParagraphWithEllipsis from './components/ParagraphWithEllipsis';
+import SearchForm from './components/SearchForm';
+import Footer from './components/Footer';
 
 import { storiesReducer } from './lib/storiesReducer';
 import { useSemiPersistentState } from './lib/useSemiPersistentState';

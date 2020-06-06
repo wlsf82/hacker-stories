@@ -4,7 +4,7 @@ import { ButtonProps } from '../../types';
 
 import './Button.css';
 
-export const Button = ({
+const Button = ({
   type = 'button',
   isDisabled = false,
   onClick,
@@ -20,3 +20,5 @@ export const Button = ({
     {children}
   </button>
 );
+
+export default Button;

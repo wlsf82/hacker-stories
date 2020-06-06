@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import { ParagraphWithEllipsis } from '../components/ParagraphWithEllipsis';
+import ParagraphWithEllipsis from '../components/ParagraphWithEllipsis';
 
 describe('ParagraphWithEllipsis', () => {
   it('renders snapshot', () => {

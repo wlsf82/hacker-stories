@@ -4,7 +4,7 @@ import { InputWithLabelProps } from '../../types';
 
 import './InputWithLabel.css';
 
-export const InputWithLabel = ({
+const InputWithLabel = ({
   id,
   value,
   type = 'text',
@@ -35,3 +35,5 @@ export const InputWithLabel = ({
     </>
   );
 };
+
+export default InputWithLabel;

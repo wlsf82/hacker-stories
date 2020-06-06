@@ -1,13 +1,13 @@
 import React from 'react';
 
-import { Button } from '../Button';
-import { InputWithLabel } from '../InputWithLabel';
+import Button from '../Button';
+import InputWithLabel from '../InputWithLabel';
 
 import { SearchFormProps } from '../../types';
 
 import './SearchForm.css';
 
-export const SearchForm = ({
+const SearchForm = ({
   searchTerm,
   onSearchInput,
   onSearchSubmit,
@@ -31,3 +31,5 @@ export const SearchForm = ({
     </Button>
   </form>
 );
+
+export default SearchForm;

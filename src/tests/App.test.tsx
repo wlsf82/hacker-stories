@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer';
 import axios from 'axios';
 
 import App from '../App';
-import { List } from '../components/List';
+import List from '../components/List';
 
 jest.mock('axios');
 
