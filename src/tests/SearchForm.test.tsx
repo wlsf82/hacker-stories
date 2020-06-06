@@ -1,7 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import { InputWithLabel } from '../components/InputWithLabel';
 import { SearchForm } from '../components/SearchForm';
 
 describe('SearchForm', () => {
@@ -18,7 +17,7 @@ describe('SearchForm', () => {
   });
 
   it('renders the input field with its value', () => {
-    const value = component.root.findByType(InputWithLabel).props.value;
+    const value = component.root.findByType('input').props.value;
 
     expect(value).toEqual(searchFormProps.searchTerm);
   });
