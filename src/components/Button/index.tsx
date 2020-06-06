@@ -8,7 +8,7 @@ const Button = ({
   type = 'button',
   isDisabled = false,
   onClick,
-  className,
+  className = '',
   children
 }: ButtonProps) => (
   <button

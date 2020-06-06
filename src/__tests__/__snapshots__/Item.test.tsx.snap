@@ -3,6 +3,11 @@
 exports[`Item renders snapshot 1`] = `
 <div
   className="item"
+  style={
+    Object {
+      "display": "flex",
+    }
+  }
 >
   <span
     style={

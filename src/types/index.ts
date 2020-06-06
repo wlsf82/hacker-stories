@@ -42,7 +42,7 @@ export type ButtonProps = {
   type?: ButtonType;
   isDisabled?: boolean;
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
-  className: string;
+  className?: string;
   children: React.ReactNode;
 };
 

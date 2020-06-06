@@ -1,9 +1,96 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`List renders snapshot 1`] = `
-Array [
+<div>
+  <div
+    className="item-header"
+    style={
+      Object {
+        "display": "flex",
+      }
+    }
+  >
+    <span
+      style={
+        Object {
+          "width": "40%",
+        }
+      }
+    >
+      <button
+        className=""
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      >
+        Title
+      </button>
+    </span>
+    <span
+      style={
+        Object {
+          "width": "30%",
+        }
+      }
+    >
+      <button
+        className=""
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      >
+        Author
+      </button>
+    </span>
+    <span
+      style={
+        Object {
+          "width": "10%",
+        }
+      }
+    >
+      <button
+        className=""
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      >
+        Comments
+      </button>
+    </span>
+    <span
+      style={
+        Object {
+          "width": "10%",
+        }
+      }
+    >
+      <button
+        className=""
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      >
+        Points
+      </button>
+    </span>
+    <span
+      style={
+        Object {
+          "width": "10%",
+        }
+      }
+    >
+      Action
+    </span>
+  </div>
   <div
     className="item"
+    style={
+      Object {
+        "display": "flex",
+      }
+    }
   >
     <span
       style={
@@ -68,9 +155,14 @@ Array [
         </svg>
       </button>
     </span>
-  </div>,
+  </div>
   <div
     className="item"
+    style={
+      Object {
+        "display": "flex",
+      }
+    }
   >
     <span
       style={
@@ -135,6 +227,6 @@ Array [
         </svg>
       </button>
     </span>
-  </div>,
-]
+  </div>
+</div>
 `;

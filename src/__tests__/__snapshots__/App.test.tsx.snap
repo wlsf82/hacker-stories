@@ -37,6 +37,90 @@ exports[`App renders snapshot 1`] = `
       Submit
     </button>
   </form>
+  <div>
+    <div
+      className="item-header"
+      style={
+        Object {
+          "display": "flex",
+        }
+      }
+    >
+      <span
+        style={
+          Object {
+            "width": "40%",
+          }
+        }
+      >
+        <button
+          className=""
+          disabled={false}
+          onClick={[Function]}
+          type="button"
+        >
+          Title
+        </button>
+      </span>
+      <span
+        style={
+          Object {
+            "width": "30%",
+          }
+        }
+      >
+        <button
+          className=""
+          disabled={false}
+          onClick={[Function]}
+          type="button"
+        >
+          Author
+        </button>
+      </span>
+      <span
+        style={
+          Object {
+            "width": "10%",
+          }
+        }
+      >
+        <button
+          className=""
+          disabled={false}
+          onClick={[Function]}
+          type="button"
+        >
+          Comments
+        </button>
+      </span>
+      <span
+        style={
+          Object {
+            "width": "10%",
+          }
+        }
+      >
+        <button
+          className=""
+          disabled={false}
+          onClick={[Function]}
+          type="button"
+        >
+          Points
+        </button>
+      </span>
+      <span
+        style={
+          Object {
+            "width": "10%",
+          }
+        }
+      >
+        Action
+      </span>
+    </div>
+  </div>
   <hr />
   <footer>
     Icons made by 

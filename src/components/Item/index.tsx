@@ -9,7 +9,7 @@ import { ItemProps } from '../../types';
 import './Item.css';
 
 const Item = ({ item, onRemoveItem } : ItemProps) => (
-  <div className="item">
+  <div className="item" style={{ display: 'flex' }}>
     <span style={{ width: '40%' }}>
       <a
         href={item.url}
