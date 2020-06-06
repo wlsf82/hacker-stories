@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Item renders snapshot 1`] = `
+<div
+  className="item"
+>
+  <span
+    style={
+      Object {
+        "width": "40%",
+      }
+    }
+  >
+    <a
+      href="https://reactjs.org/"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      React
+    </a>
+  </span>
+  <span
+    style={
+      Object {
+        "width": "30%",
+      }
+    }
+  >
+    Jordan Walke
+  </span>
+  <span
+    style={
+      Object {
+        "width": "10%",
+      }
+    }
+  >
+    3
+  </span>
+  <span
+    style={
+      Object {
+        "width": "10%",
+      }
+    }
+  >
+    4
+  </span>
+  <span
+    style={
+      Object {
+        "width": "10%",
+      }
+    }
+  >
+    <button
+      className="button button-small"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    >
+      <svg
+        height="18px"
+        width="18px"
+      >
+        check.svg
+      </svg>
+    </button>
+  </span>
+</div>
+`;
