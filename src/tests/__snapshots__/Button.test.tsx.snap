@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button renders snapshot 1`] = `
+<button
+  className="bar"
+  disabled={false}
+  type="button"
+>
+  Click me!
+</button>
+`;

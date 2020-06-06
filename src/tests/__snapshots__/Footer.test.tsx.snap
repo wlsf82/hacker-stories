@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer renders snapshot 1`] = `
+<footer>
+  Icons made by 
+  <a
+    href="https://www.flaticon.com/authors/freepik"
+    rel="noopener noreferrer"
+    target="_blank"
+    title="Freepik"
+  >
+    Freepik
+  </a>
+   from 
+  <a
+    href="https://www.flaticon.com/"
+    rel="noopener noreferrer"
+    target="_blank"
+    title="Flaticon"
+  >
+    www.flaticon.com
+  </a>
+</footer>
+`;

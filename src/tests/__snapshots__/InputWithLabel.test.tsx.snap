@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputWithLabel renders snapshot 1`] = `
+Array [
+  <label
+    className="label"
+    htmlFor="foo"
+  >
+    Cypress
+  </label>,
+  " ",
+  <input
+    className="input"
+    id="foo"
+    onChange={[MockFunction]}
+    type="text"
+    value="Cypress"
+  />,
+]
+`;
