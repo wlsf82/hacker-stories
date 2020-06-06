@@ -38,22 +38,34 @@ const List = ({ list, onRemoveItem }: ListProps) => {
     <div>
       <div className="item-header" style={{ display: 'flex' }}>
         <span style={{ width: '40%' }}>
-          <Button onClick={() => handleSort(SORTS_ENUM.TITLE)}>
+          <Button
+            onClick={() => handleSort(SORTS_ENUM.TITLE)}
+            className="list-header-button"
+          >
             Title
           </Button>
         </span>
         <span style={{ width: '30%' }}>
-          <Button onClick={() => handleSort(SORTS_ENUM.AUTHOR)}>
+          <Button
+            onClick={() => handleSort(SORTS_ENUM.AUTHOR)}
+            className="list-header-button"
+          >
             Author
           </Button>
         </span>
         <span style={{ width: '10%' }}>
-          <Button onClick={() => handleSort(SORTS_ENUM.COMMENT)}>
+          <Button
+            onClick={() => handleSort(SORTS_ENUM.COMMENT)}
+            className="list-header-button"
+          >
             Comments
           </Button>
         </span>
         <span style={{ width: '10%' }}>
-          <Button onClick={() => handleSort(SORTS_ENUM.POINT)}>
+          <Button
+            onClick={() => handleSort(SORTS_ENUM.POINT)}
+            className="list-header-button"
+          >
             Points
           </Button>
         </span>
