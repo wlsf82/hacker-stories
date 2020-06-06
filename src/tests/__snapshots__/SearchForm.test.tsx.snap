@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchForm renders snapshot 1`] = `
+<form
+  className="search-form"
+  onSubmit={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          Object {},
+        ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
+>
+  <label
+    className="label"
+    htmlFor="search"
+  >
+    <strong>
+      Search:
+    </strong>
+  </label>
+   
+  <input
+    className="input"
+    id="search"
+    onChange={
+      [MockFunction] {
+        "calls": Array [
+          Array [
+            Object {
+              "target": "Redux",
+            },
+          ],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
+        ],
+      }
+    }
+    type="text"
+    value="React"
+  />
+  <button
+    className="button button-large"
+    disabled={false}
+    type="submit"
+  >
+    Submit
+  </button>
+</form>
+`;

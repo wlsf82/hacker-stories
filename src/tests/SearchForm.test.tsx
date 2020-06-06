@@ -45,4 +45,10 @@ describe('SearchForm', () => {
 
     expect(component.root.findByType('button').props.disabled).toBeTruthy();
   });
+
+  it('renders snapshot', () => {
+    let tree = component.toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
 });

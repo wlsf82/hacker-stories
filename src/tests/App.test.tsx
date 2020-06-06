@@ -62,4 +62,11 @@ describe('App', () => {
       ['Something went wrong', ' ...']
     );
   });
+
+  it('renders snapshot', () => {
+    const component = renderer.create(<App />);
+    let tree = component.toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
 });

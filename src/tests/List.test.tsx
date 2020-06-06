@@ -26,9 +26,19 @@ describe('List', () => {
 
   const handleRemoveItem = jest.fn();
 
-  it('renders two items', () => {
-    const component = renderer.create(<List list={list} onRemoveItem={handleRemoveItem} />);
+  let component: any;
 
+  beforeEach(() => {
+    component = renderer.create(<List list={list} onRemoveItem={handleRemoveItem} />);
+  });
+
+  it('renders two items', () => {
     expect(component.root.findAllByType(Item).length).toEqual(2);
+  });
+
+  it('renders snapshot', () => {
+    let tree = component.toJSON();
+
+    expect(tree).toMatchSnapshot();
   });
 });

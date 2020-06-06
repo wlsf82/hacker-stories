@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App renders snapshot 1`] = `
+<div
+  className="container"
+>
+  <h1
+    className="headline-primary"
+  >
+    My Hacker Stories
+  </h1>
+  <form
+    className="search-form"
+    onSubmit={[Function]}
+  >
+    <label
+      className="label"
+      htmlFor="search"
+    >
+      <strong>
+        Search:
+      </strong>
+    </label>
+     
+    <input
+      className="input"
+      id="search"
+      onChange={[Function]}
+      type="text"
+      value="React"
+    />
+    <button
+      className="button button-large"
+      disabled={false}
+      type="submit"
+    >
+      Submit
+    </button>
+  </form>
+  <hr />
+  <footer>
+    Icons made by 
+    <a
+      href="https://www.flaticon.com/authors/freepik"
+      rel="noopener noreferrer"
+      target="_blank"
+      title="Freepik"
+    >
+      Freepik
+    </a>
+     from 
+    <a
+      href="https://www.flaticon.com/"
+      rel="noopener noreferrer"
+      target="_blank"
+      title="Flaticon"
+    >
+      www.flaticon.com
+    </a>
+  </footer>
+</div>
+`;
