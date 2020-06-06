@@ -18,7 +18,7 @@ exports[`List renders snapshot 1`] = `
       }
     >
       <button
-        className=""
+        className="list-header-button"
         disabled={false}
         onClick={[Function]}
         type="button"
@@ -34,7 +34,7 @@ exports[`List renders snapshot 1`] = `
       }
     >
       <button
-        className=""
+        className="list-header-button"
         disabled={false}
         onClick={[Function]}
         type="button"
@@ -50,7 +50,7 @@ exports[`List renders snapshot 1`] = `
       }
     >
       <button
-        className=""
+        className="list-header-button"
         disabled={false}
         onClick={[Function]}
         type="button"
@@ -66,7 +66,7 @@ exports[`List renders snapshot 1`] = `
       }
     >
       <button
-        className=""
+        className="list-header-button"
         disabled={false}
         onClick={[Function]}
         type="button"
