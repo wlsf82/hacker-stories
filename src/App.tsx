@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
+import Button from './components/Button'
 import List from './components/List'
 import ParagraphWithEllipsis from './components/ParagraphWithEllipsis';
 import SearchForm from './components/SearchForm';
@@ -13,7 +14,10 @@ import { Story } from './types';
 
 import './App.css';
 
-const API_ENDPOINT = 'https://hn.algolia.com/api/v1/search?query=';
+const API_BASE = 'https://hn.algolia.com/api/v1';
+const API_SEARCH = '/search';
+const PARAM_SEARCH = 'query=';
+const PARAM_PAGE = 'page=';
 
 const getLastSearches = (urls: Array<string>) =>
   urls
@@ -36,9 +40,13 @@ const getLastSearches = (urls: Array<string>) =>
     .slice(0, -1)
     .map(extractSearchTerm);
 
-const extractSearchTerm = (url: string) => url.replace(API_ENDPOINT, '');
+const extractSearchTerm = (url: string) =>
+  url
+    .substring(url.lastIndexOf('?') + 1, url.lastIndexOf('&'))
+    .replace(PARAM_SEARCH, '');
 
-const getUrl = (searchTerm: string) => `${API_ENDPOINT}${searchTerm}`;
+const getUrl = (searchTerm: string, page: number) =>
+  `${API_BASE}${API_SEARCH}?${PARAM_SEARCH}${searchTerm}&${PARAM_PAGE}${page}`;
 
 const App = () => {
   const [searchTerm, setSearchTerm] = useSemiPersistentState(
@@ -46,11 +54,11 @@ const App = () => {
     'React'
   );
 
-  const [urls, setUrls] = React.useState([getUrl(searchTerm)]);
+  const [urls, setUrls] = React.useState([getUrl(searchTerm, 0)]);
 
   const [stories, dispatchStories] = React.useReducer(
     storiesReducer,
-    { data: [], isLoading: false, isError: false }
+    { data: [], page: 0, isLoading: false, isError: false }
   );
 
   const handleFetchStories = React.useCallback(async () => {
@@ -62,7 +70,10 @@ const App = () => {
 
       dispatchStories({
         type: 'STORIES_FETCH_SUCCESS',
-        payload: result.data.hits,
+        payload: {
+          list: result.data.hits,
+          page: result.data.page,
+        },
       });
     } catch {
       dispatchStories({ type: 'STORIES_FETCH_FAILURE'});
@@ -89,7 +100,7 @@ const App = () => {
   const handleSearchSubmit = (
     event: React.FormEvent<HTMLFormElement>
   ) => {
-    handleSearch(searchTerm);
+    handleSearch(searchTerm, 0);
 
     event.preventDefault();
   };
@@ -97,12 +108,18 @@ const App = () => {
   const handleLastSearch = (searchTerm: string) => {
     setSearchTerm(searchTerm);
 
-    handleSearch(searchTerm);
+    handleSearch(searchTerm, 0);
   };
 
-  const handleSearch = (searchTerm: string) => {
-    const url = getUrl(searchTerm);
+  const handleSearch = (searchTerm: string, page: number) => {
+    const url = getUrl(searchTerm, page);
     setUrls(urls.concat(url));
+  };
+
+  const handleMore = () => {
+    const lastUrl = urls[urls.length - 1];
+    const searchTerm = extractSearchTerm(lastUrl);
+    handleSearch(searchTerm, stories.page + 1);
   };
 
   const lastSearches = getLastSearches(urls);
@@ -131,16 +148,15 @@ const App = () => {
         <ParagraphWithEllipsis>Something went wrong</ParagraphWithEllipsis>
       }
 
-      {
-        stories.isLoading ? (
-          <ParagraphWithEllipsis>Loading</ParagraphWithEllipsis>
-        ) : (
-          <List
-            list={stories.data}
-            onRemoveItem={handleRemoveStory}
-          />
-        )
-      }
+      <List list={stories.data} onRemoveItem={handleRemoveStory} />
+
+      {stories.isLoading ? (
+        <ParagraphWithEllipsis>Loading</ParagraphWithEllipsis>
+      ) : (
+        <Button onClick={handleMore}>
+          More
+        </Button>
+      )}
 
       <hr />
 

@@ -52,6 +52,7 @@ export type ParagraphWithEllipsisProps = {
 
 export type StoriesState = {
   data: Stories;
+  page: number;
   isLoading: boolean;
   isError: boolean;
 };
@@ -62,7 +63,10 @@ interface StoriesFetchInitAction {
 
 interface StoriesFetchSuccessAction {
   type: 'STORIES_FETCH_SUCCESS';
-  payload: Stories;
+  payload: {
+    list: Stories,
+    page: number,
+  };
 }
 
 interface StoriesFetchFailureAction {
