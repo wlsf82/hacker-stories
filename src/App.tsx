@@ -37,8 +37,7 @@ const getLastSearches = (urls: Array<string>) =>
       }
     }, [])
     .slice(-6)
-    .slice(0, -1)
-    .map(extractSearchTerm);
+    .slice(0, -1);
 
 const extractSearchTerm = (url: string) =>
   url
