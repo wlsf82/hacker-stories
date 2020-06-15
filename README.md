@@ -2,6 +2,8 @@
 
 Project from the updated version of the book "The Road to Learn React", by Robin Wieruch.
 
+Use the following address to visit the application deployed to Firebase https://wlsf82-hacker-stories.web.app.
+
 ## Available Scripts
 
 In the project directory, you can run:
