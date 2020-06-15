@@ -121,6 +121,13 @@ exports[`App renders snapshot 1`] = `
       </span>
     </div>
   </div>
+  <button
+    disabled={false}
+    onClick={[Function]}
+    type="button"
+  >
+    More
+  </button>
   <hr />
   <footer>
     Icons made by 
