@@ -21,7 +21,8 @@
     "start": "react-scripts -r @cypress/instrument-cra start",
     "build": "react-scripts build",
     "test": "react-scripts test src/__tests__/*",
-    "test:cypress": "cypress run"
+    "test:cypress": "cypress run",
+    "cypress:open": "cypress open"
   },
   "eslintConfig": {
     "extends": "react-app"
