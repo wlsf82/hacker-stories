@@ -35,7 +35,6 @@ describe('List', () => {
     it('ascending', () => {
       cy.get(headers.titleSelector)
         .should(BE_VISIBLE)
-        .focus()
         .click();
   
       cy.get(itemSelector)
@@ -61,7 +60,6 @@ describe('List', () => {
     it('ascending', () => {
       cy.get(headers.authorSelector)
         .should(BE_VISIBLE)
-        .focus()
         .click();
   
       cy.get(itemSelector)
@@ -87,7 +85,6 @@ describe('List', () => {
     it('ascending', () => {
       cy.get(headers.commentSelector)
         .should(BE_VISIBLE)
-        .focus()
         .click();
   
       cy.get(itemSelector)
@@ -113,7 +110,6 @@ describe('List', () => {
     it('ascending', () => {
       cy.get(headers.pointsSelector)
         .should(BE_VISIBLE)
-        .focus()
         .click();
   
       cy.get(itemSelector)
