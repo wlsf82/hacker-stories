@@ -10,26 +10,21 @@ describe('List', () => {
   const headerButtonsSelector = `${headerSelector} .list-header-button`;
   const itemSelector = '.item';
 
-  const titleHeaderSelector = `${headerButtonsSelector}:contains(Title)`;
-  const authorHeaderSelector = `${headerButtonsSelector}:contains(Author)`;
-  const commentHeaderSelector = `${headerButtonsSelector}:contains(Comments)`;
-  const pointsHeaderSelector = `${headerButtonsSelector}:contains(Points)`;
-  const actionHeaderSelector = `${headerSelector} span:contains(Action)`;
+  const headers = {
+    titleSelector: `${headerButtonsSelector}:contains(Title)`,
+    authorSelector: `${headerButtonsSelector}:contains(Author)`,
+    commentSelector: `${headerButtonsSelector}:contains(Comments)`,
+    pointsSelector: `${headerButtonsSelector}:contains(Points)`,
+    actionHSelector: `${headerSelector} span:contains(Action)`
+  }
 
   const BE_VISIBLE = 'be.visible';
   const CONTAIN = 'contain';
 
   it('properly renders the header', () => {
-    cy.get(titleHeaderSelector)
-      .should(BE_VISIBLE);
-    cy.get(authorHeaderSelector)
-      .should(BE_VISIBLE);
-    cy.get(commentHeaderSelector)
-      .should(BE_VISIBLE);
-    cy.get(pointsHeaderSelector)
-      .should(BE_VISIBLE);
-    cy.get(actionHeaderSelector)
-      .should(BE_VISIBLE);
+    for (let key in headers) {
+      cy.get(headers[key]).should(BE_VISIBLE);
+    }
   });
 
   it('renders two items', () => {
@@ -38,7 +33,7 @@ describe('List', () => {
 
   context('Order by title', () => {
     it('ascending', () => {
-      cy.get(titleHeaderSelector)
+      cy.get(headers.titleSelector)
         .should(BE_VISIBLE)
         .focus()
         .click();
@@ -49,10 +44,10 @@ describe('List', () => {
     });
   
     it('descending', () => {
-      cy.get(titleHeaderSelector)
+      cy.get(headers.titleSelector)
         .should(BE_VISIBLE)
         .click();
-      cy.get(titleHeaderSelector)
+      cy.get(headers.titleSelector)
         .should(BE_VISIBLE)
         .click();
   
@@ -64,7 +59,7 @@ describe('List', () => {
 
   context('Order by author', () => {
     it('ascending', () => {
-      cy.get(authorHeaderSelector)
+      cy.get(headers.authorSelector)
         .should(BE_VISIBLE)
         .focus()
         .click();
@@ -75,10 +70,10 @@ describe('List', () => {
     });
   
     it('descending', () => {
-      cy.get(authorHeaderSelector)
+      cy.get(headers.authorSelector)
         .should(BE_VISIBLE)
         .click();
-      cy.get(authorHeaderSelector)
+      cy.get(headers.authorSelector)
         .should(BE_VISIBLE)
         .click();
   
@@ -90,7 +85,7 @@ describe('List', () => {
 
   context('Order by comments', () => {
     it('ascending', () => {
-      cy.get(commentHeaderSelector)
+      cy.get(headers.commentSelector)
         .should(BE_VISIBLE)
         .focus()
         .click();
@@ -101,10 +96,10 @@ describe('List', () => {
     });
   
     it('descending', () => {
-      cy.get(commentHeaderSelector)
+      cy.get(headers.commentSelector)
         .should(BE_VISIBLE)
         .click();
-      cy.get(commentHeaderSelector)
+      cy.get(headers.commentSelector)
         .should(BE_VISIBLE)
         .click();
   
@@ -116,7 +111,7 @@ describe('List', () => {
 
   context('Order by points', () => {
     it('ascending', () => {
-      cy.get(pointsHeaderSelector)
+      cy.get(headers.pointsSelector)
         .should(BE_VISIBLE)
         .focus()
         .click();
@@ -127,10 +122,10 @@ describe('List', () => {
     });
   
     it('descending', () => {
-      cy.get(pointsHeaderSelector)
+      cy.get(headers.pointsSelector)
         .should(BE_VISIBLE)
         .click();
-      cy.get(pointsHeaderSelector)
+      cy.get(headers.pointsSelector)
         .should(BE_VISIBLE)
         .click();
   
