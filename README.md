@@ -4,6 +4,8 @@ Project from the updated version of the book "The Road to Learn React", by Robin
 
 Use the following address to visit the application deployed to Firebase https://wlsf82-hacker-stories.web.app.
 
+> This project was firstly writen in JavaScript, and it can be found through the following URL https://github.com/wlsf82/hackernews, with some differences here and there.
+
 ## Available Scripts
 
 In the project directory, you can run:
