@@ -133,6 +133,7 @@ const App = () => {
         onSearchSubmit={handleSearchSubmit}
       />
 
+      <div className="last-searches">
       {lastSearches.map((searchTerm: string, index: number) => (
         <button
           key={searchTerm + index}
@@ -142,6 +143,7 @@ const App = () => {
           {searchTerm}
         </button>
       ))}
+      </div>
 
       {stories.isError &&
         <ParagraphWithEllipsis>Something went wrong</ParagraphWithEllipsis>
