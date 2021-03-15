@@ -145,11 +145,11 @@ const App = () => {
       ))}
       </div>
 
+      <List list={stories.data} onRemoveItem={handleRemoveStory} />
+
       {stories.isError &&
         <ParagraphWithEllipsis>Something went wrong</ParagraphWithEllipsis>
       }
-
-      <List list={stories.data} onRemoveItem={handleRemoveStory} />
 
       {stories.isLoading ? (
         <ParagraphWithEllipsis>Loading</ParagraphWithEllipsis>
