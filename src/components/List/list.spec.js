@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { mount } from '@cypress/react'
-import List from './'
+import List from '.'
 
 describe('Item component', () => {
   const items = [

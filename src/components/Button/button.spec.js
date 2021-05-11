@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { mount } from '@cypress/react'
-import Button from './'
+import Button from '.'
 
 describe('Button component', () => {
   it('renders', () => {

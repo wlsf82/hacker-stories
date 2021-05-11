@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { mount } from '@cypress/react'
-import InputWithLabel from './'
+import InputWithLabel from '.'
 
 describe('InputWithLabel component', () => {
   it('renders focused, with a label and value', () => {
@@ -66,7 +66,7 @@ describe('InputWithLabel component', () => {
     ]
 
     types.forEach(type => {
-      it(`renders as a ${type}`, () => {
+      it(`renders as a ${type} input field`, () => {
         const props = {
           children: `I'm the label of a ${type} field`,
           type

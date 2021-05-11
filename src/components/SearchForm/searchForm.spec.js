@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { mount } from '@cypress/react'
-import SearchFrom from './'
+import SearchFrom from '.'
 
 describe('SearchFrom component', () => {
   it('renders with a value', () => {
