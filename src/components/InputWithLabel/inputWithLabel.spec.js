@@ -57,6 +57,9 @@ describe('InputWithLabel component', () => {
 
   context('Different input types', () => {
     const types = [
+      'text',
+      'number',
+      'password',
       'checkbox',
       'radio',
       'range',
