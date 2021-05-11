@@ -10,6 +10,11 @@ describe('InputWithLabel component', () => {
       children: 'Search here:',
     }
     mount(<InputWithLabel {...props}/>)
+
+    cy.get('input')
+      .should('have.focus')
+      .and('have.value', props.value)
+    cy.get('label').should('have.text', props.children)
   })
 
   it('renders not focused, with a label and value', () => {
@@ -19,6 +24,11 @@ describe('InputWithLabel component', () => {
       children: 'Search here:',
     }
     mount(<InputWithLabel {...props}/>)
+
+    cy.get('input')
+      .should('not.have.focus')
+      .and('have.value', props.value)
+    cy.get('label').should('have.text', props.children)
   })
 
   it('renders focused, with a label and no value', () => {
@@ -27,6 +37,10 @@ describe('InputWithLabel component', () => {
       children: 'Search here:',
     }
     mount(<InputWithLabel {...props}/>)
+
+    cy.get('input')
+      .should('have.focus')
+    cy.get('label').should('have.text', props.children)
   })
 
   it('renders not focused, with a label and no value', () => {
@@ -35,6 +49,10 @@ describe('InputWithLabel component', () => {
       children: 'Search here:',
     }
     mount(<InputWithLabel {...props}/>)
+
+    cy.get('input')
+      .should('not.have.focus')
+    cy.get('label').should('have.text', props.children)
   })
 
   context('Different input types', () => {
