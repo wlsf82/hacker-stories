@@ -1,12 +1,3 @@
-/*
-objectID: number;
-  url: string;
-  title: string;
-  author: string;
-  num_comments: number;
-  points: number;
-*/
-
 import * as React from 'react'
 import { mount } from '@cypress/react'
 import List from './'
