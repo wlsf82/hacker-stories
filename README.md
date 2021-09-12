@@ -35,4 +35,4 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ___
 
-Made with ❤️ by [Walmyr Filho](https://walmyrfilho.com)
+Made with ❤️ by [Walmyr Filho](https://walmyr.dev)
