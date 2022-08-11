@@ -20,7 +20,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test"
+    "test": "react-scripts test",
+    "test:cy:open": "cypress open",
+    "test:cy:run": "cypress run"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -39,6 +41,7 @@
   },
   "devDependencies": {
     "@types/react-test-renderer": "^16.9.2",
+    "cypress": "^10.4.0",
     "react-test-renderer": "^16.13.1"
   }
 }

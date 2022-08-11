@@ -19,8 +19,8 @@ const API_SEARCH = '/search';
 const PARAM_SEARCH = 'query=';
 const PARAM_PAGE = 'page=';
 
-const getLastSearches = (urls: Array<string>) =>
-  urls
+const getLastSearches = (urls: Array<string>) => {
+  const maybeDuplicatedTerms = urls
     .reduce((result: Array<string>, url: string, index: number) => {
       const searchTerm = extractSearchTerm(url);
 
@@ -38,6 +38,9 @@ const getLastSearches = (urls: Array<string>) =>
     }, [])
     .slice(-6)
     .slice(0, -1);
+
+  return [...new Set(maybeDuplicatedTerms)]
+}
 
 const extractSearchTerm = (url: string) =>
   url
