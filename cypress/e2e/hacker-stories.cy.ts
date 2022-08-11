@@ -1,3 +1,5 @@
+/// <reference path="../support/commands.ts" />
+
 describe('Hacker Stories', () => {
   it('does not duplicate last searched terms buttons', () => {
     const terms = ['Cypress.io', 'React']
