@@ -37,6 +37,9 @@ exports[`App renders snapshot 1`] = `
       Submit
     </button>
   </form>
+  <div
+    className="last-searches"
+  />
   <div>
     <div
       className="item-header"
