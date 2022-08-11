@@ -13,7 +13,7 @@ describe('Hacker Stories', () => {
       .find(`button:contains(${terms[0]})`)
       .its('length')
       .should('not.be.gt', 1)
-      cy.get('.last-searches')
+    cy.get('.last-searches')
       .as('lastSearches')
       .find(`button:contains(${terms[1]})`)
       .its('length')
